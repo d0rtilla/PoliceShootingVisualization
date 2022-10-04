@@ -1,5 +1,5 @@
 # Shooting Deaths by Police in the United States, 2015-2022
-## Contributors: Jacob Douthett, Sam Espe, Alan Jallah, Jae Neuharth
+## Contributors: Jacob Douthett, Sam Espe, Alan Jallah, Jae Neuharth (Group 6)
 
 ### Overview
 
