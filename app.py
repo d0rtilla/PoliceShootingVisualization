@@ -32,7 +32,7 @@ def bubble_chart():
 @app.route("/pie_charts")
 def pie_charts():
     shootingData = mongo.db.PoliceShootingData
-    return render_template('pie_charts', shootingData = shootingData)
+    return render_template('pie_charts.html', shootingData = shootingData)
 # Discussion page
 @app.route("/discussion")
 def discussion():
