@@ -16,20 +16,23 @@ def homepage():
     return render_template('index.html', shootingData=shootingData)
 
 # First visualization page - map
-# @app.route("/map")
-# def map():
+@app.route("/map")
+def map():
+    shootingData = mongo.db.PoliceShootingData
+    return render_template('bubble_chart.html', shootingData=shootingData )
 
 # Second visualization page - bubble chart
 # @app.route("/bubble_chart")
 # def bubble_chart():
 
 # Third visualization page - pie charts
-# @app.route("/pie_charts")
-# def pie_charts:
-
+@app.route("/pie_charts")
+def pie_charts():
+    shootingData = mongo.db.PoliceShootingData
+    return render_template('pie_charts', shootingData = shootingData)
 # Discussion page
-# @app.route("/discussion")
-# def discussion():
+@app.route("/discussion")
+def discussion():
 
 
 # End Flask bit
