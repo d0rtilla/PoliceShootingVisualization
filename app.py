@@ -8,8 +8,9 @@ app = Flask(__name__)
 # Create Flask routes
 ################################
 # Homepage
-# @app.route("/")
-# def homepage():
+@app.route("/")
+def homepage():
+    return "Hello, world."
 
 # First visualization page - map
 # @app.route("/map")
