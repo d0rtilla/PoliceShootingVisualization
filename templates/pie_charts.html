@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Police Shootings in the US</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <!-- Import the Chart.js script-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  </head>
+  <body>
+    <div class="jumbotron text-center">
+      <h1><strong>Pie Charts</strong></h1>
+      <p>
+        Our pie chart visualizations of the gender, race, and age of the shooting victims.
+      </p>
+    </div>
+
+    <!-- Chart.js chart implementation-->
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+    
+    <!--Testing Chart.js 
+        This will/can be moved later-->
+
+    <script>
+        const labels = [
+          'January',
+          'February',
+          'March',
+        ];
+      
+        const data = {
+          labels: labels,
+          datasets: [{
+            label: 'My First dataset',
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(155, 39, 102)',
+                'rgb(100, 100, 100)',
+            ],
+            borderColor: 'rgb(0, 0, 0)',
+            data: [20, 10, 5],
+          }]
+        };
+      
+        const config = {
+          type: 'pie',
+          data: data,
+          options: {}
+        };
+    </script>
+      
+    <script>
+        const myChart = new Chart(
+          document.getElementById('myChart'),
+          config
+        );
+    </script>
+   
+    <!-- Finished testing -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
