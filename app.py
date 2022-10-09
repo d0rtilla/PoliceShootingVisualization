@@ -18,9 +18,11 @@ def homepage():
 # First visualization page - map
 @app.route("/map")
 def map():
-    shootingData = mongo.db.PoliceShootingData.find({},{'_id':0,'latitude':1,'longitude':1,'is_geocoding_exact':1})
-    result = jsonify(list(shootingData))
-    return(result)
+    # shootingData = mongo.db.PoliceShootingData.find({},{'_id':0,'latitude':1,'longitude':1,'is_geocoding_exact':1})
+    # result = jsonify(list(shootingData))
+
+    
+    return render_template('map.html')
 
 
 # Second visualization page - bubble chart
@@ -37,6 +39,7 @@ def pie_charts():
     shootingData = mongo.db.PoliceShootingData.find({},{'_id':0,'armed':1})
     result = jsonify(list(shootingData))
     return(result)
+
 # Discussion page
 @app.route("/discussion")
 def discussion():
@@ -47,6 +50,7 @@ def data():
     shootingData = mongo.db.PoliceShootingData.find({},{'_id':False})
     result = jsonify(list(shootingData))
     return(result)
+
 # End Flask bit
 if __name__ == '__main__':
     app.run(debug=True)

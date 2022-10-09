@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Police Shootings in the US</title>
+    
+    <!-- Import Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+    integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+    crossorigin=""/>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+    integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+    crossorigin=""></script>
+
+    <!-- Import Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,8 +24,11 @@
       crossorigin="anonymous"
     />
 
-    
+    <!-- Import our CSS -->
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+ 
   </head>
+
   <body>
     <div class="jumbotron text-center">
       <h1><strong>Map of Shooting Incidents</strong></h1>
@@ -22,10 +37,16 @@
         our dataset took place.
       </p>
     </div>
+    
+    <div class="map" id="map"></div>
+    
+    <!-- Connect to map_logic.js -->
+    <script type="text/javascript" src="static/js/map_logic.js"></script>
+
+    <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
   </body>
 </html>
