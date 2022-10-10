@@ -14,68 +14,89 @@
 
     <!-- Import the Chart.js script-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
   </head>
+
   <body>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="discussion.html">Discussion</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Charts
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="bubble_chart.html">Bubble Chart</a></li>
+                <li><a class="dropdown-item" href="pie_charts.html">Pie Chart</a></li>
+                <li><a class="dropdown-item" href="map.html">Map</a></li>
+        </div>
+      </div>
+    </nav>
+
+
     <div class="jumbotron text-center">
       <h1><strong>Bubble Charts</strong></h1>
       <p>
-        Our bubble chart visualizations of what the victims were holding when they died.
+        Our bubble chart visualizations of what the victims were holding when
+        they died.
       </p>
     </div>
 
     <!-- Chart.js chart implementation-->
     <div>
-        <canvas id="myChart"></canvas>
+      <canvas id="myChart"></canvas>
     </div>
 
     <!--Testing Chart.js 
         This will/can be moved later-->
     <script>
-        const labels = [
-          'Here',
-          'Are',
-          'A',
-          'Set',
-          'Of',
-          'June',
-        ];
-      
-        const data = {
-          labels: labels,
-          datasets: [{
-            label: 'My First dataset',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [{
+      const labels = ["Here", "Are", "A", "Set", "Of", "June"];
+
+      const data = {
+        labels: labels,
+        datasets: [
+          {
+            label: "My First dataset",
+            backgroundColor: "rgb(255, 99, 132)",
+            borderColor: "rgb(255, 99, 132)",
+            data: [
+              {
                 x: 5,
                 y: 3,
-                r: 19
-            }, {
+                r: 19,
+              },
+              {
                 x: 8,
                 y: 2,
-                r: 80
-            }, {
+                r: 80,
+              },
+              {
                 x: 6.5,
                 y: 2.5,
-                r: 46
-            },],
-          }]
-        };
-      
-        const config = {
-          type: 'bubble',
-          data: data,
-          options: {}
-        };
+                r: 46,
+              },
+            ],
+          },
+        ],
+      };
+
+      const config = {
+        type: "bubble",
+        data: data,
+        options: {},
+      };
     </script>
-      
+
     <script>
-        const myChart = new Chart(
-          document.getElementById('myChart'),
-          config
-        );
-    </script> 
+      const myChart = new Chart(document.getElementById("myChart"), config);
+    </script>
     <!-- Finished testing -->
 
     <script
