@@ -54,8 +54,8 @@ def discussion():
 @app.route('/data')
 def data():
     shootingData = mongo.db.PoliceShootingData.find({},{'_id':False})
-    result = jsonify(list(shootingData))
-    return(result)
+    result = shootingData
+    return render_template('data.html', result = result)
 
 # End Flask bit
 if __name__ == '__main__':
