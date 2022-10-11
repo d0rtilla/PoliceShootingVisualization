@@ -18,23 +18,14 @@ let test_marker = L.marker([45,-95]).bindPopup("This is a test marker.").addTo(m
 // Get data and plot on map
 d3.json(mongo_endpoint).then(function(data){
   console.log("Raw data:", data);
-  let geoJson = {"type": "FeatureCollection"};
-  let features = [{}];
   console.log("Length:", data.length);
+  let markers = [];
   for (let i = 1; i < data.length; i++){
-    features.push({"type":"Feature",
-                    "geometry": {
-                      "type": "Point",
-                      "coordinates": [data[0]['latitude'], data[0]["longitude"]]
-                    },
-                    "properties": {
-                      "placeholder": i
-                    }
-                  })
+    markers[i] = [data[i]['latitude'], data[i]['longitude']]
   };
-  console.log("Features:", features);
-  geoJson.features = features;
-  console.log("geoJSON:", geoJson);
-  
-  L.geoJSON(geoJson).addTo(myMap);
+  console.log("Markers:", markers);
+  for (let j = 1; j < markers.length; j++){
+    // console.log("Marker Coords", markers[j]);
+    L.marker(markers[j]).addTo(myMap);
+  };
 });
