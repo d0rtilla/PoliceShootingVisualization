@@ -1,6 +1,7 @@
 # Import Dependencies
 from flask import Flask, render_template, jsonify
 from flask_pymongo import PyMongo
+from itsdangerous import json
 
 # Create Flask app
 app = Flask(__name__)
@@ -15,16 +16,20 @@ def homepage():
     shootingData = mongo.db.PoliceShootingData.find({},{'_id':0})
     return render_template('index.html', shootingData=shootingData)
 
-# First visualization page - map
-@app.route("/map")
-def map():
+# Route to get data from MongoDB
+@app.route("/mongo")
+def readMongo():
     data = mongo.db.PoliceShootingData.find({},{'_id':0, 'latitude':1, 'longitude':1, 'is_geocoding_exact':1})
-    print("Have the data!")
     result = []
     for item in data:
         result.append(item)
-    print(result)
-    return render_template('map.html', result_data = result)
+    print(jsonify(result))
+    return jsonify(result)
+
+# First visualization page - map
+@app.route("/map")
+def map():
+    return render_template('map.html')
 
 # Second visualization page - bubble chart
 @app.route("/bubble_chart")
