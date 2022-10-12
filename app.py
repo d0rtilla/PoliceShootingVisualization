@@ -34,15 +34,15 @@ def map():
 # Second visualization page - bubble chart
 @app.route("/bubble_chart")
 def bubble_chart():
-    shootingData = mongo.db.PoliceShootingData.find({},{'_id':0, 'age':1,'race':1,'gender':1})
+    shootingData = mongo.db.PoliceShootingData.find({},{'_id':0,'armed':1})
     result = jsonify(list(shootingData))
     return(result)
 
 
 # Third visualization page - pie charts
 @app.route("/pie_charts")
-def pie_charts():
-    shootingData = mongo.db.PoliceShootingData.find({},{'_id':0,'armed':1})
+def pie_charts():                                                  
+    shootingData = mongo.db.PoliceShootingData.find( {},{'_id':0, 'age':1,'race':1,'gender':1})
     result = jsonify(list(shootingData))
     return(result)
 
