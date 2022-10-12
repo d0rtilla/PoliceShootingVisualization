@@ -12,20 +12,20 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(myMap);
 
-// Create Marker Layer
-let test_marker = L.marker([45,-95]).bindPopup("This is a test marker.").addTo(myMap);
-
-// Get data and plot on map
+// Get Data and Plot on Map
 d3.json(mongo_endpoint).then(function(data){
   console.log("Raw data:", data);
   console.log("Length:", data.length);
   let markers = [];
+  let info = [];
   for (let i = 1; i < data.length; i++){
     markers[i] = [data[i]['latitude'], data[i]['longitude']]
+    info[i] = [data[i]['name']]
   };
   console.log("Markers:", markers);
+  console.log("Info:", info);
   for (let j = 1; j < markers.length; j++){
     // console.log("Marker Coords", markers[j]);
-    L.marker(markers[j]).addTo(myMap);
+    L.marker(markers[j]).bindPopup(String(info[j])).addTo(myMap);
   };
 });
