@@ -17,15 +17,19 @@ d3.json(mongo_endpoint).then(function(data){
   console.log("Raw data:", data);
   console.log("Length:", data.length);
   let markers = [];
-  let info = [];
+  let name = [];
+  let date = [];
+  let age = [];
   for (let i = 1; i < data.length; i++){
     markers[i] = [data[i]['latitude'], data[i]['longitude']]
-    info[i] = [data[i]['name']]
+    name[i] = [data[i]['name']]
+    date[i] = [data[i]['date']]
+    age[i] = [data[i]['age']]
   };
-  console.log("Markers:", markers);
-  console.log("Info:", info);
+  let metadata = "";
   for (let j = 1; j < markers.length; j++){
     // console.log("Marker Coords", markers[j]);
-    L.marker(markers[j]).bindPopup(String(info[j])).addTo(myMap);
+    metadata = "<dl><dt>Name</dt><dd>" + String(name[j]) + "</dd><dt>Date</dt><dd>" + String(date[j]) + "</dd><dt>Age</dt><dd>" + String(age[j]) + "</dd></dl>";
+    L.marker(markers[j]).bindPopup(metadata).addTo(myMap);
   };
 });
