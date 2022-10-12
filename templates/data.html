@@ -11,12 +11,9 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body background="/images/liberty.jpeg">
-    
-    <div class="navigagion">
-    <nav class="navbar navbar-expand-lg bg-blue">
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">Home</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,11 +22,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-<<<<<<< HEAD
-                <a class="nav-link" aria-current="page" href="discussion.html">Discussion</a>
-=======
                 <a class="nav-link active" aria-current="page" href="/discussion">Discussion</a>
->>>>>>> 013ac9b5451b9899fc5149263b2d3d5e8298f3d9
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -43,11 +36,44 @@
           </div>
         </div>
       </nav>
-    </div>
       <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
     crossorigin="anonymous"
   ></script>
+    <table style="width: 100%">
+    <tr>
+        <th>name</th>
+        <th>gender</th>
+        <th>age</th>
+        <th>race</th>
+        <th>city</th>
+        <th>state</th>
+        <th>date</th>
+        <th>armed</th>
+        <th>flee</th>
+        <th>body_camera</th>
+        <th>is_geocoding_exact</th>
+        <th>latitude</th>
+        <th>longitude</th>
+    </tr>
+    {% for data in result %}
+    <tr>
+            <td>{{ data['name'] }}</td>
+            <td>{{ data['gender'] }}</td>
+            <td>{{ data['age'] }}</td>
+            <td>{{ data['race'] }}</td>
+            <td>{{ data['city'] }}</td>
+            <td>{{ data['state'] }}</td>
+            <td>{{ data['date'] }}</td>
+            <td>{{ data['armed'] }}</td>
+            <td>{{ data['flee'] }}</td>
+            <td>{{ data['body_camera'] }}</td>
+            <td>{{ data['is_geocoding_exact'] }}</td>
+            <td>{{ data['latitude'] }}</td>
+            <td>{{ data['longitude'] }}</td>
+    </tr>
+    {% endfor %}
+    </table>
   </body>
 </html>

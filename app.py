@@ -1,6 +1,7 @@
 # Import Dependencies
 from flask import Flask, render_template, jsonify
 from flask_pymongo import PyMongo
+from itsdangerous import json
 
 # Create Flask app
 app = Flask(__name__)
@@ -15,31 +16,35 @@ def homepage():
     shootingData = mongo.db.PoliceShootingData.find({},{'_id':0})
     return render_template('index.html', shootingData=shootingData)
 
-# First visualization page - map
-@app.route("/map")
-def map():
-    data = mongo.db.PoliceShootingData.find({},{'_id':0, 'latitude':1, 'longitude':1, 'is_geocoding_exact':1})
-    print("Have the data!")
+# Route to get data from MongoDB
+@app.route("/mongo")
+def readMongo():
+    data = mongo.db.PoliceShootingData.find({},{'_id':0, 'latitude':1, 'longitude':1, 'is_geocoding_exact':1, 'name':1, 'date':1, 'age':1})
     result = []
     for item in data:
         result.append(item)
-    print(result)
-    return render_template('map.html', result_data = result)
+    print(jsonify(result))
+    return jsonify(result)
+
+# First visualization page - map
+@app.route("/map")
+def map():
+    return render_template('map.html')
 
 # Second visualization page - bubble chart
 @app.route("/bubble_chart")
 def bubble_chart():
-    shootingData = mongo.db.PoliceShootingData.find({},{'_id':0, 'age':1,'race':1,'gender':1})
-    result = jsonify(list(shootingData))
-    return(result)
+    shootingData = mongo.db.PoliceShootingData.find({},{'_id':0,'armed':1})
+    result = shootingData
+    return render_template('bubble_chart.html', result = result)
 
 
 # Third visualization page - pie charts
 @app.route("/pie_charts")
-def pie_charts():
-    shootingData = mongo.db.PoliceShootingData.find({},{'_id':0,'armed':1})
-    result = jsonify(list(shootingData))
-    return(result)
+def pie_charts():                                                  
+    shootingData = mongo.db.PoliceShootingData.find( {},{'_id':0, 'age':1,'race':1,'gender':1})
+    result = shootingData
+    return render_template('pie_charts.html', result = result)
 
 # Discussion page
 @app.route("/discussion")
@@ -49,8 +54,8 @@ def discussion():
 @app.route('/data')
 def data():
     shootingData = mongo.db.PoliceShootingData.find({},{'_id':False})
-    result = jsonify(list(shootingData))
-    return(result)
+    result = shootingData
+    return render_template('data.html', result = result)
 
 # End Flask bit
 if __name__ == '__main__':
