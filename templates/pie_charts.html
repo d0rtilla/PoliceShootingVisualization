@@ -11,6 +11,7 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="styles.css" />
 
     <!-- Import the Chart.js script-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -26,7 +27,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="discussion.html">Discussion</a>
+              <a class="nav-link" aria-current="page" href="discussion.html">Discussion</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -48,6 +49,7 @@
     </div>
 
     <!-- Chart.js chart implementation-->
+    <div class="container">
     <div>
         <canvas id="myChart"></canvas>
     </div>
@@ -89,6 +91,8 @@
           config
         );
     </script>
+    </div>
+    </div>
    
     <!-- Finished testing -->
 

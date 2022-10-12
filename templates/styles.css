@@ -1,0 +1,29 @@
+.container {
+    height:800px;
+    width: 600px;
+}
+
+.containerb {
+    height:500px;
+    width: 1000px;
+    background: whitesmoke;
+    margin-left: 300px;
+    margin-top: 150px;
+
+}
+
+.dropdown-item:hover {
+    color:#F39C12;
+}
+
+.navbar-brand:hover {
+    color:#F39C12;
+}
+
+.nav-link:hover {
+    color:#F39C12;
+}
+
+.text1 {
+    color: teal;
+}

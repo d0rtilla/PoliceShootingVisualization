@@ -11,12 +11,13 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="styles.css" />
 
     <!-- Import the Chart.js script-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
 
-  <body>
+  <body background:#F39C12>
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">Home</a>
@@ -26,7 +27,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="discussion.html">Discussion</a>
+              <a class="nav-link" aria-current="page" href="discussion.html">Discussion</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -42,14 +43,14 @@
 
 
     <div class="jumbotron text-center">
-      <h1><strong>Bubble Charts</strong></h1>
-      <p>
-        Our bubble chart visualizations of what the victims were holding when
-        they died.
-      </p>
+      <h1><em>Bubble Charts</em></h1>
+      <h6 class="text1">Our bubble chart visualizations of what the victims were holding when
+        they died.</h6>
     </div>
 
     <!-- Chart.js chart implementation-->
+
+    <div class="containerb">
     <div>
       <canvas id="myChart"></canvas>
     </div>
@@ -97,6 +98,7 @@
     <script>
       const myChart = new Chart(document.getElementById("myChart"), config);
     </script>
+    </div>
     <!-- Finished testing -->
 
     <script
