@@ -19,7 +19,7 @@ def homepage():
 # Route to get data from MongoDB
 @app.route("/mongo")
 def readMongo():
-    data = mongo.db.PoliceShootingData.find({},{'_id':0, 'latitude':1, 'longitude':1, 'is_geocoding_exact':1})
+    data = mongo.db.PoliceShootingData.find({},{'_id':0, 'latitude':1, 'longitude':1, 'is_geocoding_exact':1, 'name':1})
     result = []
     for item in data:
         result.append(item)
