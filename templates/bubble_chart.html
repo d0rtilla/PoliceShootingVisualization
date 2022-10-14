@@ -11,13 +11,17 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+
+
     <link rel="stylesheet" href="/static/css/styles.css" />
+
 
     <!-- Import the Chart.js script-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
   </head>
 
-  <body background:#F39C12>
+  <body>
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">Home</a>
@@ -27,7 +31,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="discussion.html">Discussion</a>
+              <a class="nav-link active" aria-current="page" href="/discussion">Discussion</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -44,68 +48,26 @@
 
 
     <div class="jumbotron text-center">
-      <h1><em>Bubble Charts</em></h1>
-      <h6 class="text1">Our bubble chart visualizations of what the victims were holding when
-        they died.</h6>
+      <h1><strong>Bubble Charts</strong></h1>
+      <p>
+        Our bubble chart visualizations of what the victims were holding when
+        they died.
+      </p>
     </div>
 
     <!-- Chart.js chart implementation-->
-
-    <div class="containerb">
     <div>
       <canvas id="myChart"></canvas>
     </div>
 
-    <!--Testing Chart.js 
-        This will/can be moved later-->
-    <script>
-      const labels = ["Here", "Are", "A", "Set", "Of", "June"];
 
-      const data = {
-        labels: labels,
-        datasets: [
-          {
-            label: "My First dataset",
-            backgroundColor: "rgb(255, 99, 132)",
-            borderColor: "rgb(255, 99, 132)",
-            data: [
-              {
-                x: 5,
-                y: 3,
-                r: 19,
-              },
-              {
-                x: 8,
-                y: 2,
-                r: 80,
-              },
-              {
-                x: 6.5,
-                y: 2.5,
-                r: 46,
-              },
-            ],
-          },
-        ],
-      };
-
-      const config = {
-        type: "bubble",
-        data: data,
-        options: {},
-      };
-    </script>
-
-    <script>
-      const myChart = new Chart(document.getElementById("myChart"), config);
-    </script>
-    </div>
     <!-- Finished testing -->
-
+    <script type="text/javascript" src="static/js/bubble.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous"
     ></script>
+
   </body>
 </html>
