@@ -11,10 +11,13 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
     <link rel="stylesheet" href="/static/css/styles.css" />
 
     <!-- Import the Chart.js script-->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
   </head>
   <body>
@@ -49,54 +52,13 @@
       </p>
     </div>
 
-    <!-- Chart.js chart implementation-->
-    <div class="container">
-    <div>
-        <canvas id="myChart"></canvas>
-    </div>
     
-    <!--Testing Chart.js 
-        This will/can be moved later-->
-
-    <script>
-        const labels = [
-          'January',
-          'February',
-          'March',
-        ];
-      
-        const data = {
-          labels: labels,
-          datasets: [{
-            label: 'My First dataset',
-            backgroundColor: [
-                'rgb(255, 99, 132)',
-                'rgb(155, 39, 102)',
-                'rgb(100, 100, 100)',
-            ],
-            borderColor: 'rgb(0, 0, 0)',
-            data: [20, 10, 5],
-          }]
-        };
-      
-        const config = {
-          type: 'pie',
-          data: data,
-          options: {}
-        };
-    </script>
-      
-    <script>
-        const myChart = new Chart(
-          document.getElementById('myChart'),
-          config
-        );
-    </script>
+    
+    <div style="height: 750px; width: 750px;">
+      <canvas id="myChart" ></canvas>
     </div>
-    </div>
-   
-    <!-- Finished testing -->
 
+    <script type="text/javascript" src="static/js/pie.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
