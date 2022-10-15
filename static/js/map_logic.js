@@ -49,7 +49,7 @@ d3.json(mongo_endpoint).then(function(data){
   
   for (let j = 1; j < data.length; j++) {
     // Create an HTML string to populate the marker popup. The string uses an HTML description list to create heading-value pairs.
-    metadata[j] = ("<dl><dt>Name</dt><dd>" + String(name[j]) + "</dd><dt>Date</dt><dd>" + String(date[j]) + "</dd><dt>Age</dt><dd>" + String(age[j]) + "</dd><dt>Sex</dt><dd>" + String(sex[j]) + "</dd><dt>Race</dt><dd>" + String(race[j) + "</dd><dt>Armed?</dt><dd>" + String(armed[j]) + "</dd><dt>City</dt><dd>" + String(city[j]) + "</dd><dt>State</dt><dd>" + String(state[j]) + "</dd></dl>");
+    metadata[j] = ("<dl><dt>Name</dt><dd>" + String(name[j]) + "</dd><dt>Date</dt><dd>" + String(date[j]) + "</dd><dt>Age</dt><dd>" + String(age[j]) + "</dd><dt>Sex</dt><dd>" + String(sex[j]) + "</dd><dt>Race</dt><dd>" + String(race[j]) + "</dd><dt>Armed?</dt><dd>" + String(armed[j]) + "</dd><dt>City</dt><dd>" + String(city[j]) + "</dd><dt>State</dt><dd>" + String(state[j]) + "</dd></dl>");
     // Create a marker for the given location and attach the metadata as a popup. Add the marker to the marker cluster layer.
     markers.addLayer((L.marker([lat[j][0], lng[j][0]])).bindPopup(metadata[j]));
   };

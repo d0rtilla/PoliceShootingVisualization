@@ -14,21 +14,23 @@ We obtained the data set from Kaggle: https://www.kaggle.com/datasets/ramjasmaur
 #### Extraction, Tranformation, and Loading
 We extracted and cleaned the data using Pandas in a Jupyter Notebook. We used Pandas to access and read in the raw data from the CSV file. We decided that we didn't want to use the columns that contained data that are somewhat subjective in nature, specifically "Signs of Mental Illness" and "Threat Level". These parameters can be argued in several ways, depending on the perspective of those involved. We also decided to exclude the "Manner of Death" column because all of the data are of people who were shot and killed by the police. We then removed entries where one or more data points were missing. We had to remove one entry where the latitude and longitude were incorrect (the incident occurred in Ohio, but the coordinates were located in Canada).
 
-To make the data easier to work with, we masked some of the values in the data set. We changed the "Gender" category to "Sex" because we don't know how an individual identified. The data set originally used single letters to record the sex and race of the person who was killed.  We used Pandas to mask these into full words so that they are easier to understand and interact with.
+To make the data easier to work with, we masked some of the values in the data set. We changed the "Gender" category to "Sex" because we don't know how any of the victims identified their gender. The data set originally used single letters to record the sex and race of the person who was killed. We used Pandas to mask these into full words so that they are easier to understand and interact with.
 
 Once the data were cleaned and transformed, we loaded the data into MongoDB using Pymongo. 
 
 #### Creating the Website
-We created a website to display our data and the visualizations thereof using HTML, CSS, JavaScript, and Python. We used Python to build the Flask app that supports the website and interacts with the MongoDB database on the user's behalf. We used HTML to create the basic structure of the webpages, and CSS to help style the pages. We used Bootstrap to do the majority of the styling. We used JavaScript to build the visualizations. We used D3 to insert the visualizations and other content into the web pages. 
+We created a website to display our data and the visualizations thereof using HTML, CSS, JavaScript, and Python. We used Python to build the Flask app that supports the website and interacts with the MongoDB database on the user's behalf. We used HTML to create the basic structure of the webpages, and CSS to style the pages. We used Bootstrap to do the majority of the styling. We used JavaScript to build the visualizations and insert them into the pages. 
 
 #### Creating the Visualizations
-We created different visualizations to explore the data. 
+We created different visualizations to explore different aspects of the data. We created a map to see how the killings were distributed geographically. To examine the trends in what people were holding when they were killed, we created a bar chart. We created pie charts to look into the demographics of the victims. 
 
-We created the bar graph and pie charts using the Charts.js package. We used Leaflet and a marker-clustering extension of Leaflet to create the map.
+The Pie Charts page contains three pie charts that display data of the victims' demographics: their age, their race, and their sex. We used the Charts.js package to create the pie charts. 
 
-We created a Leaflet map that displays the location of each incident. Each marker, when clicked, displays the data available about the person who was killed. With more than 5,000 data points, we needed to use marker clustering to a) lower the amount of processing power used in creating the map and b) to make the map easier to interact with and less cluttered.
+Our data set included what each victim was holding (or was armed with) at the time of their death. We created a bar chart to see what the distribution of frequency of the different types of objects that were held.
 
-We included a discussion page as part of the website to try to draw conclusions based on the visualizations we made.
+We created a Leaflet map that displays the location of each incident. Each marker, when clicked, displays the data available about the person who was killed. With more than 5,000 data points, we needed to use marker clustering to a) lower the amount of processing power used in creating the map and b) to make the map easier to interact with and less cluttered. We used the Leaflet Marker Clustering plug-in found in this repo: https://github.com/Leaflet/Leaflet.markercluster. 
+
+We included a discussion page as part of the website to try to draw conclusions based on the visualizations we made. We also created a way for people to leave comments on the site to reflect on their experiences and reactions to the visualizations we made.
 
 ### Instructions to Recreate the Results
 
@@ -43,4 +45,4 @@ Before running the Jupyter Notebook, ensure that your environment can use the fo
 1. Use the navigation bar and links to visit the different pages of the website.
 
 ### Acknowledgements
-We would like to thank our instructor, Dom LaBella for his ___________
+We would like to thank our instructor, Dom LaBella for his guidance as we took on this project.
