@@ -43,8 +43,23 @@ h1 {
     color:white;
 }
 
+.AgeChart {
+    height: 900px;
+    width: 900px;
+    margin: auto;
+}
 
+.SexChart {
+    height: 900px;
+    width: 900px;
+    margin: auto;
+}
 
+.RaceChart {
+    height: 900px;
+    width: 900px;
+    margin: auto;
+}
 
 
 

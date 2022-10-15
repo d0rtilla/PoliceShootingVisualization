@@ -57,13 +57,13 @@ d3.json(mongo_endpoint).then(function(shootingData){
         labels: Agelabels,
         datasets: [{
           label: 'Age',
-          backgroundColor: ['rgb(255, 99, 132)',
-          'rgb(203, 106, 252)',
-          'rgb(7, 155, 7)',
-          'rgb(33, 34, 35)',
-          'rgb(239, 187, 110)',
-          'rgb(136, 66, 98)',
-          'rgb(126, 86, 18)',
+          backgroundColor: ['#1CDCE8',
+          '#36CBE9',
+          '#51BAEA',
+          '#6CAAEB',
+          '#8699EB',
+          '#A188EC',
+          '#BB77ED',
         ],
           borderColor: 'rgb(255, 255, 255)',
           data: [under18,
@@ -79,8 +79,15 @@ d3.json(mongo_endpoint).then(function(shootingData){
       const Ageconfig = {
         type: 'pie',
         data: Agedata,
-        options: {}
+        options: {
+          plugins:{
+            legend: {
+              position: 'right'
+            }
+          }
+        }
       };
+
 
     const AgeChart = new Chart(document.getElementById("AgeChart"), Ageconfig);
 
@@ -111,8 +118,8 @@ d3.json(mongo_endpoint).then(function(shootingData){
       labels: SexLabels,
       datasets: [{
         label: 'Sex',
-        backgroundColor: ['rgb(255, 99, 132)',
-        'rgb(203, 106, 252)',
+        backgroundColor: ['#51BAEA',
+        '#BB77ED',
         ],
         borderColor: 'rgb(255, 255, 255)',
         data: [maleCount,
@@ -122,8 +129,15 @@ d3.json(mongo_endpoint).then(function(shootingData){
     const Sexconfig = {
       type: 'pie',
       data: SexData,
-      options: {}
+      options: {
+        plugins:{
+          legend: {
+            position: 'right'
+          }
+        }
+      }
     };
+
     
     SexChart = new Chart(document.getElementById("SexChart"), Sexconfig);
 
@@ -176,12 +190,12 @@ d3.json(mongo_endpoint).then(function(shootingData){
       labels: raceLabels,
       datasets: [{
         label: 'Ethnicity',
-        backgroundColor: ['rgb(255, 99, 132)',
-        'rgb(203, 106, 252)',
-        'rgb(7, 155, 7)',
-        'rgb(33, 34, 35)',
-        'rgb(239, 187, 110)',
-        'rgb(136, 66, 98)',
+        backgroundColor: ['#1CDCE8',
+        '#36CBE9',
+        '#51BAEA',
+        '#6CAAEB',
+        '#8699EB',
+        '#A188EC',
         ],
         borderColor: 'rgb(255, 255, 255)',
         data: [whiteCount,
@@ -196,8 +210,15 @@ d3.json(mongo_endpoint).then(function(shootingData){
     const raceconfig = {
       type: 'pie',
       data: raceData,
-      options: {}
+      options: {
+        plugins:{
+          legend: {
+            position: 'right'
+          }
+        }
+      }
     };
+
   
     RaceChart = new Chart(document.getElementById("RaceChart"), raceconfig);
 
