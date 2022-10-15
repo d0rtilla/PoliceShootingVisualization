@@ -13,10 +13,16 @@ mongo = PyMongo(app, uri='mongodb://localhost:27017/USPoliceShootingData')
 # Homepage
 
 
+# @app.route("/")
+# def homepage():
+#     shootingData = mongo.db.PoliceShootingData.find({}, {'_id': 0})
+#     return render_template('index.html' shootingData=shootingData)
+
 @app.route("/")
 def homepage():
-    shootingData = mongo.db.PoliceShootingData.find({}, {'_id': 0})
-    return render_template('index.html', shootingData=shootingData)
+    author = "alan. jae, sam"
+    return render_template('index.html', author=author)
+
 
 # Route to get data from MongoDB
 
