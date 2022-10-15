@@ -4,10 +4,13 @@
 }
 
 .containera {
-    height:500px;
-    width: 1000px;
-    margin-left: 40px;
-    margin-top: 150px;
+    display:flex;
+  width:800px;
+  height:600px;
+  background:white;
+  float:left;
+  margin-right: 60px;
+  margin-left: 50px;
 
 }
 
@@ -41,11 +44,10 @@ h1 {
 .photo {
     height: 200px;
     width:450px;
-    border-radius: 50%;
+    border-radius: 10px;
 }
 
-.text {
-    color: black;
-    float: left;
+.center {
+    text-align: center;
 }
 
