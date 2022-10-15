@@ -13,7 +13,73 @@
     />
     <link rel="stylesheet" href="/static/css/styles.css" />
   </head>
-  <body>
+  <style>
+    .comment-box{
+      width:50%;
+      border:1px solid #ccc;
+      margin: 50px 0;
+      padding: 10px 20px;
+      font-family: 'poppins', sans-serif;
+      border-radius: 5px;
+      margin-left: 25%;
+      margin-top: 80px;
+      box-shadow: 0px 0px 10px 1px rgb(165,165, 165);
+
+
+    }
+
+    .comment-box p{
+      text-align: left;
+      font-size: 28px;
+      color: #777;
+    }
+
+    h1 {
+      color: Black;
+    }
+
+    .header {
+      color: black;
+    }
+
+   .comment-form input, .comment-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    outline: none;
+    font-size:18px;
+    font-family: 'poppins', sans-serif;
+    border: 1px solid #ddd;
+    color: #777;
+   } 
+
+   .comment-form button{
+    margin: 10px 0;
+    border: none;
+    background-color: #d0d0d0;
+    padding:10px;
+    font-size: 18px;
+    border-radius: 3px;
+    color: #444;
+   }
+
+   .button:hover{
+    color: white;
+    background-color: #444;
+   }
+@media(max-width: 900px){
+  .comment-box{
+    width: 80%;
+    margin:5%;
+
+  }
+}
+
+
+
+  </style>
+  <body background="https://wallpaperaccess.com/full/1353541.jpg">
     <div class="navigation">
     <nav class="navbar navbar-expand-lg bg-red">
       <div class="container-fluid">
@@ -41,12 +107,29 @@
   </div>
 
     <div class="jumbotron text-center">
-      <h1><strong>Discussion</strong></h1>
-      <p>
-        Here we can provide more info about the project and why we chose our
-        visualizations
-      </p>
+      <h1><strong>Discussions</strong></h1>
+      <h6 class="header">Gun violence has been described my many as an American epidemic, as is gun violence by the police. Police shootings have a profound impact on our nation and the data shows it. Please leave a comment on how our interactive visualizations have helped u understand this problem.</h6>
     </div>
+
+<!-- 
+    <section style="background-color: #d94125;">
+      <div class="container my-5 py-5 text-dark">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-6"> -->
+            <div class="comment-box">
+              <form class="comment-form">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <textarea rows="10" placeholder="Write Your coment"></textarea>
+              <button type="Submit">Post comment</button>
+              </form>
+            </div>
+            
+           
+          <!-- </div>
+        </div>
+      </div>
+    </section> -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"

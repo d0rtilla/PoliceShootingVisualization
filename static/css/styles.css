@@ -28,26 +28,22 @@
 }
 
 p {
-    color: grey;
+    color: black;
 }
 
-.map {
-    height: 100%;
-}
 
 h1 {
-    color: pink;
+    color: black;
+}
+
+.text {
+    color:white;
 }
 
 
 
-.photo {
-    height: 200px;
-    width:450px;
-    border-radius: 10px;
-}
 
-.center {
-    text-align: center;
-}
+
+
+
 
