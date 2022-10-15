@@ -15,7 +15,7 @@ attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStree
 // Access the MongoDB data via the Mongo endpoint.
 d3.json(mongo_endpoint).then(function(data){
   
-// Create arrays to hold each parameter of the metadata.
+// Create arrays to hold each parameter of the data.
   let lat = [];
   let lng = [];
   let name = [];
@@ -41,14 +41,17 @@ d3.json(mongo_endpoint).then(function(data){
     state[i] = [data[i]['state']]
   };
 
+  // Create the empty marker layer for the marker clusters
   let markers = L.markerClusterGroup();
+  
+  // Create empty array for the metadata to populate
   let metadata = [];
   
-  for (let k = 1; k < data.length; k++) {
+  for (let j = 1; j < data.length; j++) {
     // Create an HTML string to populate the marker popup. The string uses an HTML description list to create heading-value pairs.
-    metadata[k] = ("<dl><dt>Name</dt><dd>" + String(name[k]) + "</dd><dt>Date</dt><dd>" + String(date[k]) + "</dd><dt>Age</dt><dd>" + String(age[k]) + "</dd><dt>Sex</dt><dd>" + String(sex[k]) + "</dd><dt>Race</dt><dd>" + String(race[k]) + "</dd><dt>Armed?</dt><dd>" + String(armed[k]) + "</dd><dt>City</dt><dd>" + String(city[k]) + "</dd><dt>State</dt><dd>" + String(state[k]) + "</dd></dl>");
+    metadata[j] = ("<dl><dt>Name</dt><dd>" + String(name[j]) + "</dd><dt>Date</dt><dd>" + String(date[j]) + "</dd><dt>Age</dt><dd>" + String(age[j]) + "</dd><dt>Sex</dt><dd>" + String(sex[j]) + "</dd><dt>Race</dt><dd>" + String(race[j) + "</dd><dt>Armed?</dt><dd>" + String(armed[j]) + "</dd><dt>City</dt><dd>" + String(city[j]) + "</dd><dt>State</dt><dd>" + String(state[j]) + "</dd></dl>");
     // Create a marker for the given location and attach the metadata as a popup. Add the marker to the marker cluster layer.
-    markers.addLayer((L.marker([lat[k][0], lng[k][0]])).bindPopup(metadata[k]));
+    markers.addLayer((L.marker([lat[j][0], lng[j][0]])).bindPopup(metadata[j]));
   };
 
   // Add the layer with the marker clusters to the map

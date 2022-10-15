@@ -14,7 +14,9 @@
 
 }
 
-#map { height: 400px;}
+#map { 
+    height: 400px;
+}
 
 .dropdown-item:hover {
     color:#F39C12;
