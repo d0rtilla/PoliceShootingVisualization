@@ -5,23 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Police Shootings in the US</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    
+    <!-- Import Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous"/>
+    
+    <!-- Import Chart.js files -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
 
+    <!-- Import Our CSS -->
     <link rel="stylesheet" href="/static/css/styles.css" />
-
-    <!-- Import the Chart.js script-->
-
-
   </head>
 
   <body background="https://img.freepik.com/premium-photo/white-oil-paint-brush-stroke-textture-background_53876-148871.jpg">
+    
+    <!-- Create Navigation Bar -->
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">Home</a>
@@ -35,41 +36,47 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Charts
+                Visualizations
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="/bar_chart">Bar Chart</a></li>
                 <li><a class="dropdown-item" href="/pie_charts">Pie Chart</a></li>
                 <li><a class="dropdown-item" href="/map">Map</a></li>
                 <li><a class="dropdown-item" href="/data">Data Table</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
 
+    <!-- Page Header -->
     <div class="jumbotron text-center">
       <h1><strong>Pie Charts</strong></h1>
-      <p class="text"> Our pie chart visualizations of the gender, race, and age of the shooting victims.</p>
+      <p class="text"> Our pie charts that display the distribution of age, sex, and race of the shooting victims.</p>
     </div>
-
     
-    
+    <!-- Age Pie Chart -->
     <div class="AgeChart">
       <canvas id="AgeChart" ></canvas>
     </div>
  
+    <!-- Sex Pie Chart -->
     <div class="SexChart">
       <canvas id="SexChart" ></canvas>
     </div>
  
+    <!-- Race Pie Chart -->
     <div class="RaceChart">
       <canvas id="RaceChart" ></canvas>
     </div>
 
+    <!-- Import Our JavaScript file for this page -->
     <script type="text/javascript" src="static/js/pie.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    
+    <!-- Import Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
   </body>
 </html>
