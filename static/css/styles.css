@@ -8,10 +8,11 @@
     width:800px;
     height:600px;
     background:white;
-    float:left;
-    margin-right: 60px;
+    margin: auto;
+    /* margin-right: 60px;
     margin-left: 50px;
-    margin-top: 10px;
+    margin-top: 10px; */
+    padding: 10px;
 }
 
 #map { 
@@ -122,8 +123,9 @@ h1 {
 }
 
 .photo {
-    height: 200px;
-    width:450px;
+    height: 350px;
+    width:700px;
     border-radius: 10px;
-    margin-top: 10px;
+    margin-top: 40px;
+    margin-left: 40px;
 }
