@@ -123,9 +123,9 @@ h1 {
 }
 
 .photo {
-    height: 350px;
-    width:700px;
+    height: 300px;
+    width:650px;
     border-radius: 10px;
     margin-top: 40px;
-    margin-left: 40px;
+    margin-left: 50px;
 }
