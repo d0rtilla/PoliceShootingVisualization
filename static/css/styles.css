@@ -45,21 +45,38 @@ h1 {
 }
 
 .AgeChart {
-    height: 900px;
-    width: 900px;
+    height: 800px;
+    width: 800px;
     margin: auto;
+    box-sizing: border-box;
+}
+
+.Agetext {
+    text-align: center;
+    font-weight: bold;
+    position: relative;
 }
 
 .SexChart {
-    height: 900px;
-    width: 900px;
+    height: 800px;
+    width: 800px;
     margin: auto;
 }
 
+.Sextext {
+    text-align: center;
+    font-weight: bold;
+}
+
 .RaceChart {
-    height: 900px;
-    width: 900px;
+    height: 800px;
+    width: 800px;
     margin: auto;
+}
+
+.Racetext {
+    text-align: center;
+    font-weight: bold;
 }
 
 .navbar {
