@@ -35,7 +35,7 @@ d3.json(mongo_endpoint).then(function(data){
     date[i] = [data[i]['date']]
     age[i] = [data[i]['age']]
     sex[i] = [data[i]['sex']]
-    race[i] = [data[i]['race']]
+    race[i] = [data[i]['ethnicity']]
     armed[i] = [data[i]['armed']]
     city[i] = [data[i]['city']]
     state[i] = [data[i]['state']]
