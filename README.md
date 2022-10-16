@@ -16,19 +16,13 @@ We extracted and cleaned the data using Pandas in a Jupyter Notebook. We used Pa
 
 To make the data easier to work with, we masked some of the values in the data set. We changed the "Gender" category to "Sex" because we don't know how any of the victims identified their gender. The data set originally used single letters to record the sex and race of the person who was killed. We used Pandas to mask these into full words so that they are easier to understand and interact with.
 
-Once the data were cleaned and transformed, we loaded the data into MongoDB using Pymongo. 
-
-*Once the data was cleaned and transformed, we loaded it into MongoDB using Pymongo.*
+Once the data was cleaned and transformed, we loaded it into MongoDB using Pymongo.
 
 #### Creating the Website
-We created a website to display our data and the visualizations thereof using HTML, CSS, JavaScript, and Python. We used Python to build the Flask app that supports the website and interacts with the MongoDB database on the user's behalf. We used HTML to create the basic structure of the webpages, and CSS to style the pages. We used Bootstrap to do the majority of the styling. We used JavaScript to build the visualizations and insert them into the pages. 
-
-*We created a website to display our data and the visualizations thereof using HTML, CSS, JavaScript, and Python. We used Python to build the Flask app that supports the website and interacts with the MongoDB database on the user's behalf,  HTML to create the basic structure of the webpages, and JavaScript to build the visualizations and insert them into the pages. We then used Bootstrap and CSS to style the pages.*
+We created a website to display our data and the visualizations thereof using HTML, CSS, JavaScript, and Python. We used Python to build the Flask app that supports the website and interacts with the MongoDB database on the user's behalf,  HTML to create the basic structure of the webpages, and JavaScript to build the visualizations and insert them into the pages. We then used Bootstrap and CSS to style the pages.
 
 #### Creating the Visualizations
-We created different visualizations to explore different aspects of the data. We created a map to see how the killings were distributed geographically. To examine the trends in what people were holding when they were killed, we created a bar chart. We created pie charts to look into the demographics of the victims. 
-
-*We created different visualizations to explore different aspects of the data using the JavaScript library, Chart.js, and Leaflet. We created a map to see how the killings were distributed geographically, a bar chart to examine any trends in what people were holding when they were killed, and pie charts to look into the demographics of the victims.*
+We created different visualizations to explore different aspects of the data using the JavaScript library, Chart.js, and Leaflet. We created a map to see how the killings were distributed geographically, a bar chart to examine any trends in what people were holding when they were killed, and pie charts to look into the demographics of the victims.
 
 The Pie Charts page contains three pie charts that display data of the victims' demographics: their age, their race, and their sex. We used the Charts.js package to create the pie charts. 
 
@@ -36,9 +30,7 @@ Our data set included what each victim was holding (or was armed with) at the ti
 
 We created a Leaflet map that displays the location of each incident. Each marker, when clicked, displays the data available about the person who was killed. With more than 5,000 data points, we needed to use marker clustering to a) lower the amount of processing power used in creating the map and b) to make the map easier to interact with and less cluttered. We used the Leaflet Marker Clustering plug-in found in this repo: https://github.com/Leaflet/Leaflet.markercluster. 
 
-We included a discussion page as part of the website to try to draw conclusions based on the visualizations we made. We also created a way for people to leave comments on the site to reflect on their experiences and reactions to the visualizations we made.
-
-*We included a discussion page as part of the website to try to draw conclusions based on the visualizations we made and also created a way for people to leave comments on the site to reflect on their experiences and reactions to the visualizations we made.*
+We included a discussion page as part of the website to try to draw conclusions based on the visualizations we made and also created a way for people to leave comments on the site to reflect on their experiences and reactions to the visualizations we made. Were the website hosted on an external server, users could save and share their comments with each other, but for now, the feature remains inactive.
 
 ### Instructions to Recreate the Results
 
