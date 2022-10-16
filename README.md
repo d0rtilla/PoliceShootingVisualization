@@ -46,3 +46,4 @@ Before running the Jupyter Notebook, ensure that your environment can use the fo
 
 ### Acknowledgements
 We would like to thank our instructor, Dom LaBella for his guidance as we took on this project.
+Color scheme courtesy of: https://coolors.co/
