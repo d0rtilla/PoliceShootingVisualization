@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Police shootings in the US</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Police Shootings in the US</title>
+
+    <!-- Import Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/static/css/styles.css" />
+      crossorigin="anonymous"/>
+
+    <!-- Import Our CSS -->
+    <link rel="stylesheet" href="/static/css/styles.css"/>
   </head>
 
   <body background="/static/img/liberty.jpeg">
-    
-    <div class="navigagion">
-    <nav class="navbar navbar-expand-lg">
+
+    <!-- Create Navigation Bar-->
+    <div class="navigation">
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">Home</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,46 +33,43 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Charts
+                  Visualizations
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="/bar_chart">Bar Chart</a></li>
-                  <li><a class="dropdown-item" href="/pie_charts">Pie Chart</a></li>
+                  <li><a class="dropdown-item" href="/pie_charts">Pie Charts</a></li>
                   <li><a class="dropdown-item" href="/map">Map</a></li>
                   <li><a class="dropdown-item" href="/data">Data Table</a></li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
     </div>
 
+    <!-- Page Heading -->
     <div class="jumbotron text-center">
-    <h4>Deaths in the United States by police shootings</h4>
+    <h1>Deaths in the United States by Police Shootings</h1>
     </div>
     <br>
     <br>
-    <br>
-    <br>
-    <div class="containera" style="height:600px; width:800px; background:white; margin-left: 50px; border-radius: 5px;">
+    <div class="containera">
       <div class="row">
         <div class="center">
-        <p>It is true that numbers do not lie and also very true that visuals tell a better story with numbers. In addition to the many concerning causes of death in the United States, death by police shootings has over time become a major issue. This website contains <a href="/data">data</a> that allowed us to create interactive visualizations that provide clearer descriptions of the ways in which people were killed by the police from 2015 to 2022. Our <a href="/map">map</a> displays the locations where the victims met their untimely death, the <a href="/bar_chart"> bar chart</a> provides information on what kind of item they were holding when they got shot, and the <a href="/pie_chart"> pie chart</a> desribes their demographics. You can also easily access the visualizations by clicking "charts" at the top of the screen.</p>
-       <div class="row">
-        <div class="col-md-6">
-      <img class="photo" src="https://cms.frol.us/wgbh/frontline/wp-content/uploads/2021/11/Fearphoto-1-scaled.jpg" style="height:350px; width: 700px; margin-top: 40px; margin-left: 40px;">
+          <p>A picture is worth 1,000 words. In our project, each image represents more than 5,000 lives. Among the many causes of death in the United States, one cause that garners much attention is people being killed in encounters with the police. We built this website to create and share visualizations of data on people who were shot and killed by police officers between January of 2015 and September of 2022. We created a <a href=”/map”>map</a> that displays the location of each incident, and each marker contains information about the individual who was killed. Our <a href=”/bar_chart>bar chart</a> shows the most frequent items that people were holding when they died, and the <a href=”/pie_charts>pie charts</a> display the distribution of demographics in the data set. We also provided our <a href=”/data”>data</a> in a table for people to view. The visualizations are also accessible by using the “Visualizations” drop-down menu at the top of the screen.</p>
+          <div class="row">
+            <div class="col-md-6">
+              <img class="photo" src="https://cms.frol.us/wgbh/frontline/wp-content/uploads/2021/11/Fearphoto-1-scaled.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-    </div>
-    </div>
 
-    
-
-
-
-      <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-    crossorigin="anonymous"
-  ></script>
+    crossorigin="anonymous"></script>
   </body>
 </html>
