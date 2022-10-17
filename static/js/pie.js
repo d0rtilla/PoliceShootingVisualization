@@ -81,8 +81,9 @@ d3.json(mongo_endpoint).then(function(shootingData){
         data: Agedata,
         options: {
           plugins:{
-            legend: {
-              position: 'right'
+            title: {
+              display: true,
+              text: "Age Distribution"
             }
           }
         }
@@ -131,8 +132,9 @@ d3.json(mongo_endpoint).then(function(shootingData){
       data: SexData,
       options: {
         plugins:{
-          legend: {
-            position: 'right'
+          title:{
+            display: true,
+            text: "Sex Distribution"
           }
         }
       }
@@ -212,8 +214,9 @@ d3.json(mongo_endpoint).then(function(shootingData){
       data: raceData,
       options: {
         plugins:{
-          legend: {
-            position: 'right'
+          title: {
+            display: true,
+            text: "Race Distribution"
           }
         }
       }

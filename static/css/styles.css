@@ -42,8 +42,8 @@ h1 {
 }
 
 .AgeChart {
-    height: 800px;
-    width: 800px;
+    height: 650px;
+    width: 600px;
     margin: auto;
     box-sizing: border-box;
 }
@@ -55,8 +55,8 @@ h1 {
 }
 
 .SexChart {
-    height: 800px;
-    width: 800px;
+    height: 650px;
+    width: 600px;
     margin: auto;
 }
 
@@ -66,8 +66,8 @@ h1 {
 }
 
 .RaceChart {
-    height: 800px;
-    width: 800px;
+    height: 650px;
+    width: 600px;
     margin: auto;
 }
 
