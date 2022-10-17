@@ -5,75 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Discussion</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    
+    <!-- Import Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous"/>
+    
+    <!-- Import Our CSS -->
     <link rel="stylesheet" href="/static/css/styles.css" />
   </head>
 
   <body background="https://img.freepik.com/premium-photo/white-oil-paint-brush-stroke-textture-background_53876-148871.jpg">
+    
+    <!-- Create Navigation Bar -->
     <div class="navigation">
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">Home</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/discussion">Discussion</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Charts
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/bar_chart">Bar Chart</a></li>
-                <li><a class="dropdown-item" href="/pie_charts">Pie Chart</a></li>
-                <li><a class="dropdown-item" href="/map">Map</a></li>
-                <li><a class="dropdown-item" href="/data">Data Table</a></li>
-        </div>
-      </div>
-    </nav>
-  </div>
-
-    <div class="jumbotron text-center">
-      <h1><strong>Discussions</strong></h1>
-      </div>
-
-      <div class="containerd">
-        <div class="row">
-          <div class="col-md-12">
-            <p>With the help of the visualizations we created, many important trends were exposed.</p>
-            <p>It was revealed that males constitute more than 94% (4,745) of the victims while only only 255 or 5.1%  of them were females. We also discoverered that although black people make up only 12% of the US population, they represent a staggering 26.7% (1,355) of the victims in our dataset. The data also shows that people ages 25 to 34 are the ones most likely to be shot by Police as they constitute 33.84% of the 5,000 victims, and people aged 18 and younger are least likely to fall victim as they make up only 1.96% of the total number of vitims.  Our barchart shows the type of items held by the victims when they were shot by police. 2,986 of the victims were carrying a gun, 767 a knife, 378 were unarmed, 196 carried a toy weapon, 569 of them carried  unique items, and 173 of the vicims were involved in vehicle related activities. This is a clear indication that wielding a gun during a police encounter increases the possibility of being shot.  As the dataset contains the longitudes and latitudes of the locations where the the victims were shot, we were able to create an interactive  map that shows the areas they were shot. We  discovered that many of the shootings occurred mostly in  urban communities.</p>
-            <br>
-            <p> We are very grateful to Ram Jas who shared this dataset and enabled us to put our skills to use and create these visualizations. The findings here wouldn't be possible without their help. Please leave any comments and suggestions below.</p>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/discussion">Discussion</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Visualizations
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/bar_chart">Bar Chart</a></li>
+                  <li><a class="dropdown-item" href="/pie_charts">Pie Chart</a></li>
+                  <li><a class="dropdown-item" href="/map">Map</a></li>
+                  <li><a class="dropdown-item" href="/data">Data Table</a></li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
-  
-  
-      </div>
+      </nav>
+    </div>
 
+    <!-- Page Heading -->
+    <div class="jumbotron text-center">
+      <h1><strong>Discussion</strong></h1>
+    </div>
 
-            <div class="comment-box">
-              <form class="comment-form">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <textarea rows="10" placeholder="Write Your coment"></textarea>
-              <button type="Submit">Post comment</button>
-              </form>
-            </div>
+      <!-- Discussion Content -->
+    <div class="containerd">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Observations</h3>
+          <p>From the visualizations, we were able to make some observations:</p>
+          <ul>
+            <li>About 95% (4813) of the victims were male, while only about 5% (255) were female.</li>
+            <li>Black people make up around 27% of the victims, but only are about 12% of the US population (from the 2020 Census). Black people are over-represented in the data set, which supports the idea that there is a bias (conscious or unconscious) in the police force against Black people.</li>
+            <li>White people were under-represented in the data set, making up about 75% of the US population, but only about 51% of the deaths.</li>
+            <li>The age group that was most impacted was people between the ages of 24 and 30 (34%). The age group that was the least effected were people younger than 18 years old (2%).</li> 
+            <li>The most common object a victim was recorded as holding was a gun (59%). Unarmed people made up only about 7% of the deaths. This suggests that having a gun while in an encounter with law enforcement increases the probability of being shot and killed.</li>
+            <li>From the map, we observe that most of the fatal encounters occurred in areas of the country that are more populous.</li>
+          </ul>
             
-           
-         
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+          <h3>Limitations of the Data Set</h3>
+          <p>With any data, it is important to examine it for any potential biases and confounding factors. One limitation is that this data set is strictly limited to people who were shot by the police and died. This does not include those who were shot and survived, or those who died from other causes.</p>
+          <p>Additionally, this data set was derived from a Wikipedia <a href=https://en.wikipedia.org/wiki/Lists_of_killings_by_law_enforcement_officers_in_the_United_States>page</a> that lists people killed by law enforcement officers within the United States. Because Wikipedia is an open-source website, anyone can add or remove entries to the article. This raises questions about who provides the data, and how many incidents are not recorded in this set. Ultimately, these factors are not within our control, but they could contribute to potential biases in the data.</p>
+
+          <p>How do our visualizations of this data make you feel? What questions do they raise for you? How do they relate to your interactions with law enforcement? Please leave a comment below to leave a reflection for others to read.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="containerd">
+      <div class="row">
+        <div class="col-md-12">
+        </div>
+      </div>
+    </div>
+    <!-- Comment Box -->
+    <div class="comment-box">
+      <form class="comment-form">
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea rows="10" placeholder="Write Your comment"></textarea>
+        <button type="Submit">Post comment</button>
+      </form>
+    </div>
+            
+    <!-- Import Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
   </body>
 </html>
